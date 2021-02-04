@@ -1,0 +1,23 @@
+.sidebarChat {
+  display: flex;
+  padding: 10px 10px 10px 20px;
+  align-items: center;
+  cursor: pointer;
+  border-bottom: 1px solid #f6f6f6;
+   &:hover {
+     background-color: #ebebeb;
+   }
+   &__info {
+     margin-left: 15px;
+   }
+   &__info > h2 {
+     font-size: 16px;
+     font-weight: 400;
+   }
+   &__info > p {
+    font-size: 16px;
+    font-weight: 100;
+  }
+}
+
+

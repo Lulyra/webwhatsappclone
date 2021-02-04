@@ -1,0 +1,84 @@
+.chat {
+  display: flex;
+  flex-direction: column;
+  flex: 0.70;
+  &__header {
+    height: 19px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid lightgray;
+    justify-content: space-between;
+  }
+  &__headerInfo{
+    display: flex;
+    align-items: center;
+  }
+  &__headerInfo > h3 {
+    font-size: 16px;
+    font-weight: 400;
+    padding-left: 10px;
+  }
+  &__body {
+    flex: 1;
+    background-image: url("https://user-images.githubusercontent.com/15075759/28719144-86dc0f70-73b1-11e7-911d-60d70fcded21.png");
+    background-position: center;
+    padding: 30px;
+    overflow-y: scroll;
+  }
+  &__message {
+    margin-left: 60px;
+    margin-right: 60px;
+    font-size: 16px;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #ffffff;
+    width: fit-content;
+    margin-bottom: 3px;
+  }
+  &__timestamp {
+    position: relative;
+    top: 9px;
+    color: #bababa;
+    align-self: flex-end;
+    padding-left: 15px;
+    font-size: small;
+  }
+  &__footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 62px;
+    border-top: 1px solid lightgray;
+    & > form {
+      flex: 1;
+      display: flex;
+      & > input {
+        flex: 1;
+        border-radius: 30px;
+        padding: 10px;
+        border: none;
+        outline-style: none;
+      }
+      & > button {
+        display: none;
+      }
+    }
+  }
+
+  &__receiver {
+    margin-left: auto;
+    background-color: #dcf8c6;
+  }
+  &__smileIcon {
+    color: #b4b4b4;
+    cursor: pointer;
+    padding: 10px;
+  }
+  &__footerAttachIcon {
+    transform: rotate(45deg);
+    color: #b4b4b4;
+    cursor: pointer;
+    padding: 10px;
+  }
+}
