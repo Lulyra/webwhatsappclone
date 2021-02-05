@@ -1,9 +1,9 @@
-import express from 'express';
-import mongoose from 'mongoose';
-import dotenv from 'dotenv';
-import bodyParser from 'body-parser';
+import express from "express";
+import mongoose from "mongoose";
+import dotenv from "dotenv";
+import bodyParser from "body-parser";
 
-import users from './routes/api/users.js';
+import users from "./routes/api/users.js";
 
 // Initiation
 const app = express();
@@ -13,11 +13,14 @@ const port = process.env.PORT || 5000;
 
 // Connect DB
 mongoose
-  .connect(process.env.mongoURI, { useNewUrlParser: true, useUnifiedTopology: true })
-  .then(() => console.log('Db connected.'))
+  .connect(process.env.mongoURI, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+  })
+  .then(() => console.log("Db connected."))
   .catch((error) => console.log(error));
 
 // Use Routes
-app.use('/api/users', users);
+app.use("/api/users", users);
 
 app.listen(port, () => console.log(`Running on ${port}`));
